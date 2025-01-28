@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body class="bg-secondary">
+    <div class="text-center ">
+        <h2 class="my-3 fw-medium">Question 1</h2>
+     <input type="text" id="que" class="rounded border-0">
+        <button onclick="question1()" class="rounded">Submit</button>
+        <div id="result1"></div>
+    </div>
+
+
+    <div class="text-center my-4">
+        <h2 class="fw-medium">Question 7</h2>
+        <input type="text" id="que7" class="rounded border-0">
+        <button onclick="question7()" class="rounded">Submit</button>
+        <div id="result7"></div>
+    </div>
+
+
+    <div class="text-center my-4 ">
+        <h2 class="fw-medium">Question 5</h2>
+        <input type="text"  id="que5" class="rounded border-1">
+        <button onclick="question5()" class="rounded">Submit</button>
+        <div id="result5"></div>
+    </div>
+
+
+        <div class="text-center my-4">
+            <h2 class="fw-medium">Question 6</h2>
+            <input type="text" id="que6" class="rounded border-1">
+            <button onclick="question6()" class="rounded">Submit</button>
+            <div id="result6"></div>
+            
+        </div>
+
+
+        <div class="text-center my-4">
+            <h2 class="fw-medium">Question 10</h2>
+            <input type="text" id="que10" class="rounded border-1">
+            <button onclick="question10()" class="rounded">Submit</button>
+            <div id="result10"></div>
+        </div>
+    <script>
+        // Number 1
+        function question1() {
+            var address = que.value.toLowerCase()
+            console.log(address);
+            result1.innerHTML=address
+        }
+
+        // number 7
+
+        function question7() {
+            var address = que7.value.toLowerCase()
+            console.log(address); 
+            result7.innerHTML=address
+        }
+    //    Number 5
+
+        function question5(){
+            var items = que5.value
+            if(items%2==0){
+            //  console.log('You won a discount')
+             var ans = "You won a discount"
+            } else if(items%2==1){
+            //  console.log('sorry you are not eligible for the discount');
+             var ans = 'sorry you are not eligible for the discount'
+            }else{
+                // console.log('please input a number');
+                var ans = 'please input a number'
+            }
+             result5.innerHTML= ans
+        }
+
+      
+    //    Number 6
+
+        function question6(){
+            var temperature= que6.value
+        
+            if(temperature<19){
+                // console.log('cold');
+                var ans = 'cold'
+            } else if(temperature>20 && temperature<28){
+                // console.log('warm');
+                var ans = 'walm'
+            }else if(temperature>28) {
+                // console.log('hot');
+                var ans = 'hot'  
+            } else {
+                // console.log('input a number');
+                var ans = 'input a number'              
+            }
+            result6.innerHTML = ans
+        }
+
+
+    // Number 10
+
+    function question10(){
+        var luggage = que10.value
+    
+        if(luggage<20){
+            // console.log('Underweight');
+            var ans ='Underweight'  
+        } else if(luggage>=20 && luggage<30){
+            // console.log('Allowed');
+            var ans = 'Allowed'
+        } else if(luggage>30){
+            // console.log('Overweight');
+            var ans =  'Overweight'      
+        } else {
+            // console.log('input a number');
+            var ans = 'input a number'           
+        }
+        result10.innerHTML=ans
+    }
+    </script>
+</body>
+</html>
